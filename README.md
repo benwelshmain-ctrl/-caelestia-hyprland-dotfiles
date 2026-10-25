@@ -4,6 +4,10 @@ These are my personal settings for an Arch Linux desktop using Hyprland and Cael
 
 This repository adds my settings on top of Caelestia. It is not a complete Linux installer. Back up your current settings before copying anything.
 
+## Get the files
+
+On the GitHub page, choose **Code → Download ZIP**, then extract the ZIP. You do not need to sign in to GitHub or set up a Git name or email just to install these dotfiles.
+
 ## Install the programs
 
 On Arch Linux, install Caelestia using its [official instructions](https://github.com/caelestia-dots/caelestia). The usual steps are:
@@ -47,22 +51,6 @@ Some Quickshell files link to Caelestia's installed files at `/etc/xdg/quickshel
 - **Cursor:** Edit `dotfiles/.config/caelestia/hypr-vars.lua`.
 - **Logo:** Change the `logo` entry in `dotfiles/.config/caelestia/shell.json`, or replace the logo in `~/Pictures/Logo`.
 - **Colors and themes:** The app theme files are under `dotfiles/.config`.
-
-## Git name for this repository
-
-In this copy of the repository, the Git author name is set to `user`. Git keeps this setting inside the local `.git` folder, so it does not change your Linux login, terminal greeting, or other repositories. People who clone this repository set their own author details.
-
-To choose a different author name for this repository, open a terminal in its folder and run:
-
-```sh
-git config user.name "Your Name"
-```
-
-Git also needs an author email. To link commits to your GitHub account without showing your personal email, copy the `noreply` address from GitHub **Settings → Emails**, then set it for this repository:
-
-```sh
-git config user.email "your-github-noreply-address"
-```
 
 ## Credits
 
