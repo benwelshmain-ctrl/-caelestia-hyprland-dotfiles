@@ -1,0 +1,1 @@
+/etc/xdg/quickshell/caelestia/services/IdleInhibitor.qml

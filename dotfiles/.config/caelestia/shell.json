@@ -1,0 +1,111 @@
+{
+    "appearance": {
+        "anim": {
+            "durations": {
+                "scale": 1.1
+            }
+        }
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": true,
+            "showOnHover": true
+        },
+        "clock": {
+            "showDate": true,
+            "showIcon": false
+        },
+        "entries": [
+            {
+                "enabled": true,
+                "id": "logo"
+            },
+            {
+                "enabled": true,
+                "id": "workspaces"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "clock"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "tray"
+            },
+            {
+                "enabled": false,
+                "id": "statusIcons"
+            },
+            {
+                "enabled": true,
+                "id": "power"
+            }
+        ],
+        "statusIcons": [
+            {
+                "enabled": false,
+                "id": "lockStatus"
+            },
+            {
+                "enabled": false,
+                "id": "audio"
+            },
+            {
+                "enabled": false,
+                "id": "microphone"
+            },
+            {
+                "enabled": false,
+                "id": "kbLayout"
+            },
+            {
+                "enabled": false,
+                "id": "network"
+            },
+            {
+                "enabled": false,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": false,
+                "id": "battery"
+            }
+        ],
+        "tray": {
+            "compact": true
+        },
+        "workspaces": {
+            "activeTrail": true,
+            "showWindows": false
+        }
+    },
+    "dashboard": {
+        "performance": {
+            "showNetwork": false
+        },
+        "showClockSeconds": false,
+        "showWeather": true
+    },
+    "general": {
+        "logo": "~/Pictures/Logo/ben-bar-large.png"
+    },
+    "paths": {
+        "wallpaperDir": "~/Pictures/Wallpapers"
+    },
+    "services": {
+        "smartScheme": true
+    },
+    "utilities": {
+        "cards": {
+            "quickToggles": true
+        }
+    }
+}

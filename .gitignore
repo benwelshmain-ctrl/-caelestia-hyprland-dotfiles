@@ -1,0 +1,8 @@
+# Personal transfer helper and terminal backup
+/copy-to-poes.sh
+/terminal-backup/
+
+# Wallpaper files are kept in the local bundle. Add images you have permission
+# to redistribute if you want them tracked in a public fork.
+/assets/Pictures/Wallpapers/*
+!/assets/Pictures/Wallpapers/README.txt

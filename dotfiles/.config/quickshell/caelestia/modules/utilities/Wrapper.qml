@@ -1,0 +1,1 @@
+/etc/xdg/quickshell/caelestia/modules/utilities/Wrapper.qml
