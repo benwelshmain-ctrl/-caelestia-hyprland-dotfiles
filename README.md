@@ -32,15 +32,16 @@ You can skip Awww if you do not want animated wallpaper changes. The rest of the
 3. Open a terminal in this repository and copy the files:
 
 ```sh
-mkdir -p ~/.config ~/.local ~/Pictures/Logo
+mkdir -p ~/.config ~/.local ~/Pictures/Logo ~/Pictures/Wallpapers
 cp -a dotfiles/.config/. ~/.config/
 cp -a dotfiles/.local/. ~/.local/
 cp -a assets/Pictures/Logo/. ~/Pictures/Logo/
+cp -a assets/Pictures/Wallpapers/. ~/Pictures/Wallpapers/
 ```
 
 4. Restart Caelestia by pressing **Ctrl+Super+Alt+R**.
 
-The wallpaper images are not included here. Put your own images in `~/Pictures/Wallpapers`.
+The repository includes four wallpapers: `0019.jpg`, `0028.jpg`, `Space-Nebula.png`, and `Fantasy-Autumn.png`. Add any other wallpapers you want to `~/Pictures/Wallpapers`.
 
 Some Quickshell files link to Caelestia's installed files at `/etc/xdg/quickshell/caelestia`. Install Caelestia first. If those files are somewhere else on your system, the links need to be changed to match.
 
@@ -54,4 +55,4 @@ Some Quickshell files link to Caelestia's installed files at `/etc/xdg/quickshel
 
 ## Credits
 
-The Caelestia customizations are based on [Caelestia](https://github.com/caelestia-dots/caelestia). The included Discord theme files come from [Midnight](https://github.com/refact0r/midnight-discord). See `LICENSE` for license details. Wallpaper images stay in the local bundle because their redistribution terms have not been checked.
+The Caelestia customizations are based on [Caelestia](https://github.com/caelestia-dots/caelestia). The included Discord theme files come from [Midnight](https://github.com/refact0r/midnight-discord). See `LICENSE` for license details. Only the four wallpapers listed above are included; the rest of my local wallpaper collection is not tracked here.
