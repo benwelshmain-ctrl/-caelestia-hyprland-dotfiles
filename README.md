@@ -1,58 +1,56 @@
-# Caelestia + Hyprland setup
+# My Caelestia + Hyprland desktop
 
-These are my personal settings for an Arch Linux desktop using Hyprland and Caelestia. They customize the launcher, notifications, quick settings, cursor, keybinds, and wallpaper animations.
+These are the settings from my Arch Linux desktop, with four wallpapers included. Install Caelestia first, then copy these files into your home folder. Back up your existing settings before copying.
 
-This repository adds my settings on top of Caelestia. It is not a complete Linux installer. Back up your current settings before copying anything.
+## Install
 
-## Get the files
+1. Install Caelestia using its [official instructions](https://github.com/caelestia-dots/caelestia).
+2. Install the terminal programs used by these settings:
 
-On the GitHub page, choose **Code → Download ZIP**, then extract the ZIP. You do not need to sign in to GitHub or set up a Git name or email just to install these dotfiles.
+   ```sh
+   sudo pacman -S --needed foot fish fastfetch
+   ```
 
-## Install the programs
+   For animated wallpaper changes, also install Awww and Pillow:
 
-On Arch Linux, install Caelestia using its [official instructions](https://github.com/caelestia-dots/caelestia). The usual steps are:
+   ```sh
+   sudo pacman -S --needed awww python-pillow
+   ```
 
-```sh
-paru -S caelestia-cli
-caelestia install
-```
+3. On GitHub, select **Code → Download ZIP** and extract it. You do not need a GitHub account, Git setup, or a Git email to install these files.
+4. Open a terminal in the extracted folder and copy the settings and included images:
 
-For the animated wallpaper effect, also install Awww and Pillow:
+   ```sh
+   mkdir -p ~/.config ~/.local ~/Pictures/Logo ~/Pictures/Wallpapers
+   cp -a dotfiles/.config/. ~/.config/
+   cp -a dotfiles/.local/. ~/.local/
+   cp -a assets/Pictures/Logo/. ~/Pictures/Logo/
+   cp -a assets/Pictures/Wallpapers/. ~/Pictures/Wallpapers/
+   ```
 
-```sh
-sudo pacman -S --needed awww python-pillow
-```
+5. Reload Hyprland with `hyprctl reload`, then restart Caelestia with **Ctrl+Super+Alt+R**.
 
-You can skip Awww if you do not want animated wallpaper changes. The rest of the desktop still works.
+The included wallpapers are `0019.jpg`, `0028.jpg`, `Space-Nebula.png`, and `Fantasy-Autumn.png`. You can put more images in `~/Pictures/Wallpapers`.
 
-## Copy these settings
+## Change the personal bits
 
-1. Download or clone this repository.
-2. Back up `~/.config` and `~/.local`.
-3. Open a terminal in this repository and copy the files:
+Open the files below in a text editor and change the value shown.
 
-```sh
-mkdir -p ~/.config ~/.local ~/Pictures/Logo ~/Pictures/Wallpapers
-cp -a dotfiles/.config/. ~/.config/
-cp -a dotfiles/.local/. ~/.local/
-cp -a assets/Pictures/Logo/. ~/Pictures/Logo/
-cp -a assets/Pictures/Wallpapers/. ~/Pictures/Wallpapers/
-```
+| What to change | File | Setting |
+| --- | --- | --- |
+| Terminal greeting/name | `dotfiles/.config/fastfetch/config.jsonc` | Change `Welcome back, user` to your preferred text. |
+| Terminal window title | `dotfiles/.config/foot/foot.ini` | Change `title=foot`. |
+| Terminal or browser opened by shortcuts | `dotfiles/.config/hypr/variables.lua` | Change `terminal = "foot"` or `browser = "zen-browser"`. These are the programs opened by **Super+T** and **Super+W**. |
+| Browser used by Caelestia | `dotfiles/.config/caelestia/hypr-vars.lua` | Set `browser` to the same browser command as above. |
+| Image shown in the terminal | `dotfiles/.config/fastfetch/config.jsonc` | Change `logo.source`; the included image is `~/Pictures/Logo/ben.png`. |
+| Logo at the top-left of the bar and dashboard | `dotfiles/.config/caelestia/shell.json` | Change `general.logo`; the included image is `~/Pictures/Logo/ben-bar-large.png`. |
 
-4. Restart Caelestia by pressing **Ctrl+Super+Alt+R**.
+To use your own logos, copy the images to `~/Pictures/Logo` and update the matching path above. The original images are in `assets/Pictures/Logo`.
 
-The repository includes four wallpapers: `0019.jpg`, `0028.jpg`, `Space-Nebula.png`, and `Fantasy-Autumn.png`. Add any other wallpapers you want to `~/Pictures/Wallpapers`.
+Other useful settings: change your monitor in `dotfiles/.config/hypr/hyprland-gui.lua` (the current setting is `DP-1` at `1920x1080@240Hz`), and change the cursor in `dotfiles/.config/caelestia/hypr-vars.lua`.
 
-Some Quickshell files link to Caelestia's installed files at `/etc/xdg/quickshell/caelestia`. Install Caelestia first. If those files are somewhere else on your system, the links need to be changed to match.
-
-## Change the settings
-
-- **Monitor:** Edit `dotfiles/.config/hypr/hyprland-gui.lua`. It currently says `DP-1` and `1920x1080@240Hz`; use your monitor's name and resolution.
-- **Apps and shortcuts:** Edit `dotfiles/.config/hypr/variables.lua`. For example, `Super+W` opens Zen Browser. Change the app names if you use different programs.
-- **Cursor:** Edit `dotfiles/.config/caelestia/hypr-vars.lua`.
-- **Logo:** Change the `logo` entry in `dotfiles/.config/caelestia/shell.json`, or replace the logo in `~/Pictures/Logo`.
-- **Colors and themes:** The app theme files are under `dotfiles/.config`.
+Some Quickshell files use Caelestia files under `/etc/xdg/quickshell/caelestia`. Install Caelestia first. If your system stores those files elsewhere, update the links in `dotfiles/.config/quickshell/caelestia`.
 
 ## Credits
 
-The Caelestia customizations are based on [Caelestia](https://github.com/caelestia-dots/caelestia). The included Discord theme files come from [Midnight](https://github.com/refact0r/midnight-discord). See `LICENSE` for license details. Only the four wallpapers listed above are included; the rest of my local wallpaper collection is not tracked here.
+The desktop is based on [Caelestia](https://github.com/caelestia-dots/caelestia). The included Discord themes come from [Midnight](https://github.com/refact0r/midnight-discord). See [LICENSE](LICENSE) for license details.
